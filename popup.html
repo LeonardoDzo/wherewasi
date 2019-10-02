@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #404040;
+      max-width: 350;
+    }
+
+    .button_cont {
+      width: 350px;
+    }
+
+    .example_f {
+      border: none;
+      background: #555353;
+      color: #ffffff !important;
+      font-weight: 100;
+      padding: 20px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      font-size: 22px;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+    }
+
+    ::placeholder {
+      color: white;
+    }
+
+    input:focus {
+      outline: none !important;
+      border: 1px #404040;
+      box-shadow: 0 0 10px #404040;
+    }
+
+    label {
+      height: 30px;
+      width: 300px;
+      max-width: 300;
+      outline: none;
+      color: whitesmoke;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .example_f span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.4s;
+    }
+
+    .example_f span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .example_f:hover span {
+      padding-right: 25px;
+    }
+
+    .example_f:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    label.disabled {
+      color: #aaa;
+    }
+
+    h1 {
+      font: 600 1.5em/1 'Raleway', sans-serif;
+      color: rgba(0, 0, 0, .5);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      position: absolute;
+      top: 25%;
+      width: 100%;
+    }
+
+    .title,
+    .title:after {
+      font-weight: 900;
+      color: #aaa;
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+      letter-spacing: .1em;
+      padding: .2em 0 .25em 0;
+    }
+
+    .subtitle,
+    .subtitle:after {
+      font-weight: 900;
+      color: #aaa;
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+      letter-spacing: .1em;
+      padding: .2em 0 .25em 0;
+    }
+
+    .title {
+      font-size: 2em;
+      z-index: 100;
+      text-shadow: .04em .04em 0 #404040;
+    }
+
+    .subtitle {
+      visibility: hidden;
+      font-size: 1em;
+      z-index: 100;
+      text-shadow: .04em .04em 0 #404040;
+    }
+
+    .title:after {
+      content: attr(data-shadow-text);
+      color: rgba(0, 0, 0, .35);
+      text-shadow: none;
+      position: absolute;
+      left: .0875em;
+      top: .0875em;
+      z-index: -1;
+      -webkit-mask-image: url(//f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">
+    Where was I?
+  </div>
+  <br>
+  <div class="button_cont" align="left">
+    <input type="text" class="example_f" id="searchInput" placeholder="Some page">
+    <a class="example_f" id="button" target="_blank" rel="nofollow"><span>Find</span></a></div> <br>
+  <div class="subtitle" id="subtitle">
+    Last page visited.
+  </div>
+  <br>
+  <label id="url"></label>
+  <script src="popup.js"></script>
+</body>
+
+</html>
