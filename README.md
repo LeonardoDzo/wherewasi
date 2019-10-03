@@ -1,4 +1,5 @@
 # Where Was I?
 
 ### Description
- * it's about extension for chrome, where you can find your last page visited from easier and faster way.
+ * It's a chrome extension. which provides  an easier and faster way where you can find your last page visited.
+
